@@ -1,0 +1,16 @@
+language: node_js
+
+dist: trusty
+sudo: false
+
+node_js:
+  - 'node'
+  # no need to target older version as it is just to build
+
+install:
+  - yarn
+
+script:
+  - yarn run lint
+  - yarn run test:unit
+  - yarn run build
