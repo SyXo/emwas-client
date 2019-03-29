@@ -1,5 +1,8 @@
 # Efficient Masturbation With Aggregated Search
 
+[![Build Status](https://travis-ci.org/fabienleite/emwas-client.svg?branch=master)](https://travis-ci.org/fabienleite/emwas-client)
+[![dependencies Status](https://david-dm.org/fabienleite/emwas-client/status.svg)](https://david-dm.org/fabienleite/emwas-client)
+
 emwas is a tool that gather searches from different porn sites and display them into one only convivial interface. It allows you to find the porn you're looking for faster and gives you the direct link to the original videos. It is for now intended to work with a limited number of non-free big porn websites.
 
 This repo concerns the client part of the tool.
