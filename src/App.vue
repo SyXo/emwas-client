@@ -9,20 +9,29 @@
 </template>
 
 <style lang="sass">
+
+@import ./assets/sass/fonts.sass
+@import ./assets/sass/variables
+
 #app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
-  color: #2c3e50
+  color: $text-color
+  font-size: 16px;
+  h1, h2, h3, h4
+    font-family: 'Alegreya Sans', 'Open Sans', Helvetica, Arial, sans-serif
 
 #nav
   padding: 30px
 
-#nav a
+a
   font-weight: bold
-  color: #2c3e50
+  color: $accent-color
 
-#nav a.router-link-exact-active
-  color: #42b983
+#nav
+  a
+    .router-link-exact-active
+      color: $text-color
 </style>
