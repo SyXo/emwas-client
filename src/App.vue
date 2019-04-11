@@ -34,4 +34,7 @@ a
   a
     .router-link-exact-active
       color: $text-color
+
+.emwas-logo
+  max-width: 640px
 </style>
