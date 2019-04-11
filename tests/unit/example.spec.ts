@@ -1,13 +1,13 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import Search from '@/components/Search.vue';
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
+describe('Search.vue', () => {
+  it('has one and only one search input', () => {
     const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
+    const wrapper = shallowMount(Search, {
       propsData: { msg },
     });
-    expect(wrapper.text()).to.include(msg);
+    expect(wrapper.findAll('.search__input').length).to.eql(1);
   });
 });
