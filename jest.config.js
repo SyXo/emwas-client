@@ -25,4 +25,5 @@ module.exports = {
   testURL: 'http://localhost/',
   collectCoverage: true,
   collectCoverageFrom: ['**/*.{ts,vue}', '!**/node_modules/**', '!src/main.ts'],
+  coverageReporters: ['json'],
 };

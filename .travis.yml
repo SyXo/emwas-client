@@ -12,5 +12,10 @@ install:
 
 script:
   - yarn run lint
+  - yarn global add codecov
   - yarn run test:unit
   - yarn run build
+
+after_success:
+  - mv coverage/coverage-final.json coverage/coverage.json
+  - codecov
