@@ -1,6 +1,7 @@
 # Efficient Masturbation With Aggregated Search
 
 [![Build Status](https://travis-ci.org/fabienleite/emwas-client.svg?branch=master)](https://travis-ci.org/fabienleite/emwas-client)
+[![codecov](https://codecov.io/gh/fabienleite/emwas-client/branch/master/graph/badge.svg)](https://codecov.io/gh/fabienleite/emwas-client)
 [![dependencies Status](https://david-dm.org/fabienleite/emwas-client/status.svg)](https://david-dm.org/fabienleite/emwas-client)
 [![DeepScan grade](https://deepscan.io/api/teams/3235/projects/4760/branches/38028/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3235&pid=4760&bid=38028) [![Greenkeeper badge](https://badges.greenkeeper.io/fabienleite/emwas-client.svg)](https://greenkeeper.io/)
 
