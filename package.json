@@ -2,27 +2,13 @@
   "name": "emwas-client",
   "version": "0.1.0",
   "description": "Porn search utility (GUI)",
+  "author": "Fabien Leite",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fabienleite/emwas-client.git"
-  },
-  "keywords": [
-    "porn",
-    "search",
-    "vue"
-  ],
-  "author": "Fabien Leite",
-  "license": "CECILL-2.0",
-  "bugs": {
-    "url": "https://github.com/fabienleite/emwas-client/issues"
-  },
-  "homepage": "https://github.com/fabienleite/emwas-client#readme",
   "dependencies": {
     "vue": "^2.6.6",
     "vue-class-component": "^7.0.0",
@@ -31,10 +17,10 @@
   },
   "devDependencies": {
     "@types/chai": "^4.1.0",
-    "@types/mocha": "^5.2.4",
+    "@types/jest": "^23.1.4",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-plugin-typescript": "^3.5.0",
-    "@vue/cli-plugin-unit-mocha": "^3.5.0",
+    "@vue/cli-plugin-unit-jest": "^3.5.3",
     "@vue/cli-service": "^3.5.0",
     "@vue/eslint-config-airbnb": "^4.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
@@ -45,7 +31,22 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "ts-jest": "^23.0.0",
     "typescript": "^3.2.1",
     "vue-template-compiler": "^2.5.21"
+  },
+  "bugs": {
+    "url": "https://github.com/fabienleite/emwas-client/issues"
+  },
+  "homepage": "https://github.com/fabienleite/emwas-client#readme",
+  "keywords": [
+    "porn",
+    "search",
+    "vue"
+  ],
+  "license": "CECILL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabienleite/emwas-client.git"
   }
 }
