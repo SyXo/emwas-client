@@ -42,7 +42,7 @@
     "search",
     "vue"
   ],
-  "license": "CECILL-2.0",
+  "license": "CECILL-2.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fabienleite/emwas-client.git"
