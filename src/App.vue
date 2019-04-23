@@ -19,7 +19,7 @@
   -moz-osx-font-smoothing: grayscale
   text-align: center
   color: $text-color
-  font-size: 16px;
+  font-size: 16px
   h1, h2, h3, h4
     font-family: 'Alegreya Sans', 'Open Sans', Helvetica, Arial, sans-serif
 
