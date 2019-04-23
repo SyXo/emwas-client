@@ -4,7 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <transition appear name="page-appear">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -37,4 +39,12 @@ a
 
 .emwas-logo
   max-width: 640px
+
+.page-appear-enter-active, .page-appear-leave-active
+  opacity: 0
+  transition: all 150ms ease-in-out 0s
+
+.page-appear-enter, .page-appear-leave-to
+  opacity: 0
+
 </style>
