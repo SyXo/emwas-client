@@ -4,7 +4,7 @@ dist: trusty
 sudo: false
 
 node_js:
-  - 'node'
+  - '10'
   # no need to target older version as it is just to build
 
 install:
