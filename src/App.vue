@@ -16,6 +16,7 @@
 @import ./assets/sass/variables
 
 #app
+  padding-top: 1em
   font-family: 'Open Sans', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -46,5 +47,8 @@ a
 
 .page-appear-enter, .page-appear-leave-to
   opacity: 0
+
+nav
+  margin-bottom: 2em
 
 </style>

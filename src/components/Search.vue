@@ -2,28 +2,45 @@
   <div class="search">
 
     <div class="search__container">
-      <input class="search__input" type="text" placeholder="Search">
+      <form action="#" v-on:submit.prevent="launchSearch()">
+        <label class="search__label">
+          <input
+            class="search__input"
+            type="text"
+            placeholder="Search"
+            v-model="searchText"
+          >
+          Search
+        </label>
+        <input class="search__submit" type="submit" value="Go">
+      </form>
     </div>
 
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Search extends Vue {
-  @Prop() private msg!: string;
+  searchText: string = '';
+
+  launchSearch() : void {
+    console.error('Must implement search on emwas API');
+    console.log(`Search would be performed on ${this.searchText}`);
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
+@import ../assets/sass/variables
 
 .search
   width: 100%
-  margin: 0px
-  padding: 0px
+  margin: 0
+  padding: 0
   display: flex
   flex-direction: column
   align-items: center
@@ -34,19 +51,36 @@ export default class Search extends Vue {
     padding-top: 64px
     width: 60%
 
+  &__label
+    color: transparent
+
+  &__submit
+    background-color: $accent-color
+    border: none
+    color: white
+    padding: 15px 32px
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 1.1em
+    border-radius: 25px
+
+  &__submit:hover
+    cursor: pointer
+    box-shadow: 2px 5px 4px transparentize($text-color, 0.8)
+
   &__input
     width: 100%
     padding: 12px 24px
+    margin-bottom: 1em
     background-color: transparent
-    transition: transform 250ms ease-in-out
     font-family: 'Alegreya Sans', 'Open Sans', Helvetica, sans-serif
     font-size: 22px
     font-weight: bold
     line-height: 24px
     color: #575756
-    background-color: transparent
 
-    background-image: url(../assets/icons/icon_search.svg);
+    background-image: url(../assets/icons/icon_search.svg)
 
     background-repeat: no-repeat
     background-size: 22px 22px

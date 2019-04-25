@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="emwas logo" class="emwas-logo" src="../assets/logo.png">
-    <Search msg="Welcome to Your Vue.js + TypeScript App"/>
+    <Search/>
   </div>
 </template>
 
