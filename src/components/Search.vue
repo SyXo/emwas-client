@@ -21,6 +21,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import * as search from '../http/search';
 
 @Component
 export default class Search extends Vue {
@@ -29,6 +30,9 @@ export default class Search extends Vue {
   launchSearch() : void {
     console.error('Must implement search on emwas API');
     console.log(`Search would be performed on ${this.searchText}`);
+    search.default.findVideosWithText(this.searchText).then((response) => {
+      console.log(response);
+    });
   }
 }
 </script>
