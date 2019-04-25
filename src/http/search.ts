@@ -27,7 +27,7 @@ class SearchResults {
     } catch (e) {
       throw new Error(`Failed on calling emwas API : ${e}`);
     }
-    return result;
+    return result.data;
   }
 }
 

@@ -28,8 +28,6 @@ export default class Search extends Vue {
   searchText: string = '';
 
   launchSearch() : void {
-    console.error('Must implement search on emwas API');
-    console.log(`Search would be performed on ${this.searchText}`);
     search.default.findVideosWithText(this.searchText).then((response) => {
       console.log(response);
     });
