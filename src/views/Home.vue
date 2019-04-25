@@ -23,7 +23,5 @@ export default class Home extends Vue {}
 
 .emwas-logo
   max-width: 0.7 * $medium-screen
-  @media screen and (max-width: $medium-screen)
-    max-width: 70%
 
 </style>
