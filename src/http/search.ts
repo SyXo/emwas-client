@@ -11,11 +11,11 @@ class SearchResults {
    * @param textSearch the search you want to perform on websites
    * @param filters the filters you want the API to apply
    */
-  static async findVideosWithText(textSearch: string, filters: (string)[] = [] || null) {
+  static async findVideosWithText(textSearch: string, filters: (string)[] | null = null) {
     if (textSearch.length < 3) {
       return null;
     }
-    if (filters.length > 0) {
+    if (filters !== null && filters.length > 0) {
       throw new Error('Search filters are not implemented yet');
     }
     let result = null;
