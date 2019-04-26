@@ -12,7 +12,7 @@ class SearchResults {
    * @param filters the filters you want the API to apply
    */
   static async findVideosWithText(textSearch: string, filters: (string)[] = [] || null) {
-    if (textSearch.length <= 3) {
+    if (textSearch.length < 3) {
       return null;
     }
     if (filters.length > 0) {
