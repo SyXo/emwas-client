@@ -14,6 +14,11 @@
         </label>
         <input class="search__submit primary-button" type="submit" value="Go">
       </form>
+      <div v-if="flashMessage !== ''" class="flash-info">
+        <div class="flash-info__content">
+          <font-awesome-icon icon="info-circle"/> {{flashMessage}}
+        </div>
+      </div>
     </div>
 
   </div>
@@ -27,9 +32,16 @@ import * as search from '../http/search';
 export default class Search extends Vue {
   searchText: string = '';
 
+  flashMessage: string = '';
+
   launchSearch() : void {
+    this.flashMessage = '';
     search.default.findVideosWithText(this.searchText).then((response) => {
-      console.log(response);
+      if (response === null) {
+        this.flashMessage = 'You need to search on at least 4 characters';
+      } else {
+        console.log(response);
+      }
     });
   }
 }
@@ -90,5 +102,8 @@ export default class Search extends Vue {
       border-bottom: 1px solid $text-color-lower-alpha
       border-radius: 0
       background-position: 100% center
+
+.flash-info
+  margin-top: 2em
 
 </style>

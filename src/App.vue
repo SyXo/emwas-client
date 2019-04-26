@@ -66,4 +66,17 @@ nav
     cursor: pointer
     box-shadow: 2px 5px 4px transparentize($text-color, 0.8)
 
+.flash-info
+  width: 80%
+  padding: 5px 15px 5px 15px
+  background-color: $third-color
+  text-align: center
+  display: inline-block
+  border-radius: 20px
+  font-style: italic
+  overflow: hidden
+
+  &__content svg
+    margin-right: 0.5rem
+
 </style>
