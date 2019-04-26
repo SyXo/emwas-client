@@ -51,4 +51,19 @@ a
 nav
   margin-bottom: 2em
 
+.primary-button
+  background-color: $accent-color
+  border: none
+  color: white
+  padding: 15px 32px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 1.1em
+  border-radius: 25px
+
+  &:hover
+    cursor: pointer
+    box-shadow: 2px 5px 4px transparentize($text-color, 0.8)
+
 </style>

@@ -12,7 +12,7 @@
           >
           Search
         </label>
-        <input class="search__submit" type="submit" value="Go">
+        <input class="search__submit primary-button" type="submit" value="Go">
       </form>
     </div>
 
@@ -56,21 +56,6 @@ export default class Search extends Vue {
   &__label
     color: transparent
 
-  &__submit
-    background-color: $accent-color
-    border: none
-    color: white
-    padding: 15px 32px
-    text-align: center
-    text-decoration: none
-    display: inline-block
-    font-size: 1.1em
-    border-radius: 25px
-
-  &__submit:hover
-    cursor: pointer
-    box-shadow: 2px 5px 4px transparentize($text-color, 0.8)
-
   &__input
     width: 100%
     padding: 12px 24px
@@ -80,7 +65,7 @@ export default class Search extends Vue {
     font-size: 22px
     font-weight: bold
     line-height: 24px
-    color: #575756
+    color: $text-color
 
     background-image: url(../assets/icons/icon_search.svg)
 
@@ -88,13 +73,13 @@ export default class Search extends Vue {
     background-size: 22px 22px
     background-position: 97% center
     border-radius: 50px
-    border: 1px solid #575756
+    border: 1px solid $text-color-lower-alpha
     transition: all 250ms ease-in-out
     backface-visibility: hidden
     transform-style: preserve-3d
 
     &::placeholder
-      color: color(#575756 a(0.8))
+      color: $text-color-lower-alpha
       text-transform: uppercase
       letter-spacing: 1.5px
 
@@ -102,7 +87,7 @@ export default class Search extends Vue {
       padding: 12px 0
       outline: 0
       border: 1px solid transparent
-      border-bottom: 1px solid #575756
+      border-bottom: 1px solid $text-color-lower-alpha
       border-radius: 0
       background-position: 100% center
 
