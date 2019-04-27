@@ -1,0 +1,127 @@
+// this is a classical example of an API result for a search on "Natalia"
+export default [
+  {
+    service: 1,
+    title: "18 Year Old Teen Natalia Queen's First Interracial",
+    url: 'https://www.julesjordan.com/trial/scenes/18-Year-Old-Teen-Natalia-Queens-First-Interracial-Facial-BBC-Dredd-4k-Petite_vids.html',
+    performers: [
+      'Natalia Queen',
+      'Dredd',
+    ],
+    thumbnailUrl: [
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/111931.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/111931.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/111861.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/111851.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/111881.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/111901.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/111911.jpg',
+    ],
+    description: 'Natalia Queen gets the DREDD treatment for her FIRST INTERRACIAL scene!  Natalia is a sexy spinner from Kentucky that’s 18 and is ready for the biggest cock she’s ever taken.  Dredd met her at the mall and decided to bring her to Jules’ house to have some fun.  Natalia’s dressed in a sexy white lace top with tight daisy dukes and high heels as she and Dredd make out and show off her body.  Dredd helps her out of her clothes then pulls out his MONSTER COCK as Natalia  opens wide and tries to take that huge cock all the way down her throat.  She struggles to get her mouth around it, but that doesn’t stop this young slut from putting in work to satisfy that big dick.  Natalia rims Dredd’s ass before straddling him and impaling herself on that massive member.  Her pussy is stretched to the MAX as she rides that huge cock hard.  Dredd pounds away at her tight teenage hole as Natalia screams for more, then Dredd shoots his load all over her face!  This young slut is just getting started, I think we’ll be seeing a lot more of her!\n',
+    date: '2019-02-28T00:00:00.000Z',
+    length: 1980,
+    tags: [],
+  },
+  {
+    service: 1,
+    title: 'Natalia Starr Anal, Watch Me Gape!',
+    url: 'https://www.julesjordan.com/trial/scenes/Natalia-Starr-Anal-Gape-Facial-Manuel-Ferrara_vids.html',
+    performers: [
+      'Natalia Starr',
+      'Manuel Ferrara',
+    ],
+    thumbnailUrl: [
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/57271.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/57271.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/57261.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/57265.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/57262.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/57263.jpg',
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/57266.jpg',
+    ],
+    description: "Natalia Starr flew in from Russia just to have her ass fucked by the Man himself, Manuel Ferrara.  Slim & Slender Natalia is lounging by the pool in some super sexy stripper wear with hot pink high heels.  Manuel checks her out then pulls out his dick for Natalia to suck on.  He goes back to showing off her amazing body for a little while before stuffing his big cock back in her mouth.  Natalia drools and slobbers all over that dick until Manuel can't take it anymore and wants to feel her tight pussy.  He fucks her from behind right there next to the pool and then they move inside for more hardcore action.  Manuel fingers her ass as he fucks her pussy, making Natalia scream.  Natalia's not satisfied with just his fingers so she lays down and tells Manuel to put his big cock in her tight little asshole.  He fucks her tiny asshole as rubs and fingers her pretty pussy to multiple screaming orgasms before blasting her face with his gooey load.  ",
+    date: '2018-04-17T00:00:00.000Z',
+    length: 2460,
+    tags: [],
+  },
+  {
+    service: 1,
+    title: 'Natalia Starr POV, Facial Blast From Manuel Ferrara',
+    url: 'https://www.julesjordan.com/trial/scenes/Natalia-Starr-Facial-POV_vids.html',
+    performers: [
+      'Natalia Starr',
+      'Manuel Ferrara',
+    ],
+    thumbnailUrl: [
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/50689.jpg',
+    ],
+    description: "All natural babe Natalia Starr gets a face full of Manuel juice in this hot scene from \"Manuel's Fucking POV #3\". Of course, that's not all that happens. She makes sure to suck the uncut member that is bound to deliver and takes that thick fuck-stick in her puffy pink hole. Those natural titties bounce and sway while Natalia rides cock like a slutty cowgirl! This little whore bends over and takes it balls deep, doggy style, and sucks it some more. She never ignores the art and importance of a good rim job. She makes total eye contact while getting those gorgeous tits fucked then licks the tip like a good little kitty. This Starr really shines bright!",
+    date: '2016-01-26T00:00:00.000Z',
+    length: 2220,
+    tags: [],
+  },
+  {
+    service: 1,
+    title: 'Natalia Starr Loves Hot Cum In Her Mouth. The Face Shows She Loved It!',
+    url: 'https://www.julesjordan.com/trial/scenes/Natalia-Starr-Facial-Manuel-Ferrara_vids.html',
+    performers: [
+      'Natalia Starr',
+      'Manuel Ferrara',
+    ],
+    thumbnailUrl: [
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/47664.jpg',
+    ],
+    description: "Natalia Starr Loves Hot Cum In Her Mouth. The Face Shows She Loved It! How about a pretty blonde with good sized (not huge) natural tits shaped just how tits should be shaped? What if she's in black lingerie and high heels? What if her attitude's fresh and easy? Sound good? Yes? Ok, check this portion of \"MANUEL'S  MAXIMUM PENETRATION 2\". You're gonna like it, I did.",
+    date: '2015-03-26T00:00:00.000Z',
+    length: 2040,
+    tags: [],
+  },
+  {
+    service: 1,
+    title: 'Natalia Rossi Has A Big Black Cock Fetish',
+    url: 'https://www.julesjordan.com/trial/scenes/natalia-rossi-has-a-big-black-cock-fetish_vids.html',
+    performers: [
+      'Natalia Rossi',
+      'Mr. Marcus',
+    ],
+    thumbnailUrl: [
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/19614.jpg',
+    ],
+    description: "Natalia Rossi Has A Big Black Cock Fetish. Some times a girl needs big black cock and some times she doesn't, this is the former. From ONCE YOU GO BLACK 5 Natalia Rossi has a go at Mr. Marcus because? Because of the big black cock, get it? \na pretty blonde and handsome brother in an interracial romp that'll rock your world, watch.",
+    date: '2012-12-18T00:00:00.000Z',
+    length: 1980,
+    tags: [],
+  },
+  {
+    service: 1,
+    title: 'Natalia Rossi Gaping Anal',
+    url: 'https://www.julesjordan.com/trial/scenes/natalia-rossi-gaping-anal_vids.html',
+    performers: [
+      'Natalia Rossi',
+      'Voodoo',
+    ],
+    thumbnailUrl: [
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/7063.jpg',
+    ],
+    description: "In this video's opening seconds, Natalia Rossi is in maximum flirtation mode as she wiggles against the wall in a short skirt. She reveals her bald pussy and a big ole butt plug that she's working around inside with her fingertips. She's one of those girls who looks so angelic, that you know she's got to be a demon in bed, and she doesn't disappoint. Voodoo takes everything she's got to offer in this 35 minute ball-busting bum-fuck. ",
+    date: '2011-10-06T00:00:00.000Z',
+    length: 0,
+    tags: [],
+  },
+  {
+    service: 1,
+    title: 'Natalia Rossi Gets An A For Anal',
+    url: 'https://www.julesjordan.com/trial/scenes/natalia-rossi-gets-an-a-for-anal_vids.html',
+    performers: [
+      'Natalia Rossi',
+      'Steve Holmes',
+    ],
+    thumbnailUrl: [
+      'https://thumbs.julesjordan.com/trial/content//contentthumbs/768.jpg',
+    ],
+    description: "Natalia Rossi has been to much of a flirt with people, showing them her pussy and tits. This doesn't sit well with Steve who hasn't been given that privilege! Well Natalia Rossi rectifies this as some heavy flirting ensues between the two. Soon she's showing the goods and Steve's whipping out his dick and we're off! Some early dick sucking which leads to Steve going behind and doing some serious and I mean serious licking to Natalia's ass. You will love watching Natalia Rossi's ass being licked. There's Ass To Mouth too from Natalia. You want to know about the gaping, well she does develop one, definitely some good gape action here with Natalia Rossi's ass. The pop comes after a little more Ass To Mouth.",
+    date: '2011-06-20T00:00:00.000Z',
+    length: 2280,
+    tags: [],
+  },
+];

@@ -22,8 +22,9 @@ module.exports = {
   testMatch: [
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)',
   ],
+  verbose: true,
   testURL: 'http://localhost/',
   collectCoverage: true,
-  collectCoverageFrom: ['**/*.{ts,vue}', '!**/node_modules/**', '!src/main.ts', '!src/router.ts'],
+  collectCoverageFrom: ['**/*.{ts,vue}', '!**/node_modules/**', '!src/main.ts', '!src/router.ts', '!tests/**'],
   coverageReporters: ['json', 'text'],
 };

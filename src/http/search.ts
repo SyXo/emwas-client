@@ -1,8 +1,8 @@
-import * as axios from 'axios';
+import axios from 'axios';
 import * as variables from '../variables';
 
 class SearchResults {
-  static httpClient: axios.AxiosStatic = axios.default;
+  static httpClient = axios;
 
   static realSearchUrl: string = variables.default.apiUrl + variables.default.searchRoute;
 
