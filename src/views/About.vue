@@ -62,7 +62,8 @@
           <div class="question-answer">
             <div class="question-answer__question">Where are you hosted ?</div>
             <div class="question-answer__answer">
-              We are for now hosted on AWS (Elastic Beanstalk and S3 + Cloudfront).
+              We are for now hosted on AWS Lambda for server side and Netlify
+              for client side.
             </div>
           </div>
         </div>
