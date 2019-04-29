@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <transition appear name="page-appear">
-      <div id="view-wrapper">
+    <div id="view-wrapper">
+      <transition appear name="page-appear">
         <router-view/>
-      </div>
-    </transition>
+      </transition>
+    </div>
     <footer>
       <nav id="navigation">
         <router-link to="/">Home</router-link> |
