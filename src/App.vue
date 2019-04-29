@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <transition appear name="page-appear">
-      <router-view/>
+      <div id="view-wrapper">
+        <router-view/>
+      </div>
     </transition>
+    <footer>
+      <nav id="navigation">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
+      </nav>
+    </footer>
   </div>
 </template>
 
@@ -14,6 +18,10 @@
 
 @import ./assets/sass/fonts.sass
 @import ./assets/sass/variables
+
+#view-wrapper
+  margin-bottom: 2em
+  min-height: 85vh
 
 #app
   padding-top: 1em
