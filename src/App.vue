@@ -46,9 +46,6 @@ a
     .router-link-exact-active
       color: $text-color
 
-.emwas-logo
-  max-width: 640px
-
 .page-appear-enter-active, .page-appear-leave-active
   opacity: 0
   transition: all 150ms ease-in-out 0s

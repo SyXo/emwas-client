@@ -65,12 +65,19 @@ export default class Search extends Vue {
     color: transparent
 
   &__input
-    width: 100%
-    padding: 12px 24px
+    @media screen and (max-width: $medium-screen)
+      width: 90%
+      padding: 12px 0 12px 5%
+    @media screen and (min-width: $medium-screen)
+      width: 0.7 * $medium-screen
+      padding: 12px 0 12px 32px
     margin-bottom: 1em
     background-color: transparent
     font-family: 'Alegreya Sans', 'Open Sans', Helvetica, sans-serif
-    font-size: 22px
+    @media screen and (max-width: $small-screen)
+      font-size: 18px
+    @media screen and (min-width: $small-screen)
+      font-size: 22px
     font-weight: bold
     line-height: 24px
     color: $text-color
@@ -79,7 +86,7 @@ export default class Search extends Vue {
 
     background-repeat: no-repeat
     background-size: 22px 22px
-    background-position: 97% center
+    background-position: 95% center
     border-radius: 50px
     border: 1px solid $text-color-lower-alpha
     transition: all 250ms ease-in-out
@@ -98,5 +105,11 @@ export default class Search extends Vue {
       border-bottom: 1px solid $text-color-lower-alpha
       border-radius: 0
       background-position: 100% center
+
+.search__submit
+  display: block
+  margin-right: auto
+  margin-left: auto
+  text-align: center
 
 </style>

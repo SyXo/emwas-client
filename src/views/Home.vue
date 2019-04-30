@@ -34,6 +34,8 @@ export default class Home extends Vue {
 
 .emwas-logo
   max-width: 0.7 * $medium-screen
+  @media screen and (max-width: $small-screen)
+    max-width: 90%
 
 .flash-info
   margin-top: 2em
