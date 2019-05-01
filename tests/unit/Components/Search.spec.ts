@@ -20,7 +20,6 @@ describe('Search.vue', () => {
   });
 
   it('Update state to HTTP call result when submitting form', async () => {
-    console.log(SearchElementWrapper.vm.$store.state);
     SearchElementWrapper.find('.search__input').setValue('Natalia');
     SearchElementWrapper.find('form').trigger('submit');
     await flushPromises();
