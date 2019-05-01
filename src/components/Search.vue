@@ -27,17 +27,13 @@ import * as search from '../http/search';
 export default class Search extends Vue {
   searchText: string = '';
 
-  searchResult = {};
-
-  getSearchResult() { return this.searchResult; }
-
   async launchSearch() {
     this.$emit('setFlashMessage', '');
     const response = await search.default.findVideosWithText(this.searchText);
     if (response === null) {
       this.$emit('setFlashMessage', 'You need to search on at least 3 characters');
     } else {
-      this.searchResult = response;
+      this.$emit('updatevideosList', response);
     }
   }
 }

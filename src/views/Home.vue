@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <img alt="emwas logo" class="emwas-logo" src="../assets/logo.png">
-    <Search v-on:setFlashMessage="setFlashMessage"/>
+    <Search
+      v-on:setFlashMessage="setFlashMessage"
+      v-on:updatevideosList="updatevideosList"
+    />
     <div v-if="flashMessage !== ''" class="flash-info">
       <div class="flash-info__content">
         <font-awesome-icon icon="info-circle"/> {{flashMessage}}
@@ -22,9 +25,13 @@ import Search from '@/components/Search.vue'; // @ is an alias to /src
 export default class Home extends Vue {
   flashMessage: string = '';
 
-  setFlashMessage(message: string): void {
-    this.flashMessage = message;
-  }
+  videosList = {};
+
+  getvideosList() { return this.videosList; }
+
+  updatevideosList(result: object) { this.videosList = result; }
+
+  setFlashMessage(message: string): void { this.flashMessage = message; }
 }
 </script>
 
