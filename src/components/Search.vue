@@ -28,18 +28,19 @@ export default class Search extends Vue {
   searchText: string = '';
 
   async launchSearch() {
-    this.$emit('setFlashMessage', '');
     const response = await search.default.findVideosWithText(this.searchText);
     if (response === null) {
-      this.$emit('setFlashMessage', 'You need to search on at least 3 characters');
+      this.$store.commit('setFlashMessage', 'You need to search on at least 3 characters');
     } else {
-      this.$emit('updatevideosList', response);
+      if (this.$store.state.flashMessage !== '') {
+        this.$store.commit('setFlashMessage', '');
+      }
+      this.$store.commit('updateVideosList', response);
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 @import ../assets/sass/variables
 

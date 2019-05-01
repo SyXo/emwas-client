@@ -1,10 +1,7 @@
 <template>
   <div class="home">
     <img alt="emwas logo" class="emwas-logo" src="../assets/logo.png">
-    <Search
-      v-on:setFlashMessage="setFlashMessage"
-      v-on:updatevideosList="updatevideosList"
-    />
+    <Search/>
     <div v-if="flashMessage !== ''" class="flash-info">
       <div class="flash-info__content">
         <font-awesome-icon icon="info-circle"/> {{flashMessage}}
@@ -15,23 +12,19 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Search from '@/components/Search.vue'; // @ is an alias to /src
+import { mapState } from 'vuex';
+import Search from '@/components/Search.vue';
 
 @Component({
   components: {
     Search,
   },
+  computed: mapState([
+    'videosList',
+    'flashMessage',
+  ]),
 })
 export default class Home extends Vue {
-  flashMessage: string = '';
-
-  videosList = {};
-
-  getvideosList() { return this.videosList; }
-
-  updatevideosList(result: object) { this.videosList = result; }
-
-  setFlashMessage(message: string): void { this.flashMessage = message; }
 }
 </script>
 
