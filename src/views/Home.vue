@@ -12,19 +12,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { mapState } from 'vuex';
+import { State } from 'vuex-class';
 import Search from '@/components/Search.vue';
 
 @Component({
   components: {
     Search,
   },
-  computed: mapState([
-    'videosList',
-    'flashMessage',
-  ]),
 })
 export default class Home extends Vue {
+  @State('videosList') videosList!: [];
+
+  @State('flashMessage') flashMessage!: string;
 }
 </script>
 
