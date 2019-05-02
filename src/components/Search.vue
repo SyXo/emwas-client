@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import * as search from '../http/search';
+import * as search from '../http/HttpSearch';
 
 @Component
 export default class Search extends Vue {

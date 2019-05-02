@@ -3,7 +3,7 @@ import flushPromises from 'flush-promises';
 import Vuex from 'vuex';
 import Search from '@/components/Search.vue';
 import store from '@/store/store';
-import * as httpSearch from '@/http/search';
+import * as httpSearch from '@/http/HttpSearch';
 import * as nataliaSearchResult from '../../mocks/http/SearchNatalia';
 
 describe('Search.vue', () => {

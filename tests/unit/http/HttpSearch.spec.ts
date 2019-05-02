@@ -1,8 +1,8 @@
-import * as httpSearch from '@/http/search';
+import * as httpSearch from '@/http/HttpSearch';
 import nataliaSearchResult from '../../mocks/http/SearchNatalia';
 import MockAdapter from 'axios-mock-adapter';
 
-describe('http/search.ts', () => {
+describe('http/HttpSearch.ts', () => {
   describe('findVideosWithText', () => {
     it('should return what the API returned if it happened well', async () => {
       const mock = new MockAdapter(httpSearch.default.httpClient);

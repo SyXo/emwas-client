@@ -2,7 +2,7 @@ import { mount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import flushPromises from 'flush-promises';
 import Home from '@/views/Home.vue';
-import * as httpSearch from '@/http/search';
+import * as httpSearch from '@/http/HttpSearch';
 import store from '@/store/store';
 
 // add fontawesome icon for test not to warn
