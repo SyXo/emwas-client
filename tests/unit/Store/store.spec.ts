@@ -30,7 +30,7 @@ describe('store/store.ts', () => {
     const expectedInitalState = {
       videosList: [],
       flashMessage: '',
-      currentPage: 0,
+      currentPage: 1,
       vidPerPage: 8,
     };
     expect(store.state).toEqual(expectedInitalState);

@@ -9,7 +9,7 @@ const store: StoreOptions<RootState> = {
   state: {
     videosList: [],
     flashMessage: '',
-    currentPage: 0,
+    currentPage: 1,
     vidPerPage: 8,
   },
   mutations: {

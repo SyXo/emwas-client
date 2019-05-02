@@ -2,6 +2,7 @@ import { mount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import VideosList from '@/views/VideosList.vue';
 import store from '@/store/store';
+import longResult from '../../mocks/http/longResult';
 
 describe('VideosList.vue', () => {
   const localVue = createLocalVue();
