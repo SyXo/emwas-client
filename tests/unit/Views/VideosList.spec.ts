@@ -12,4 +12,10 @@ describe('VideosList.vue', () => {
   it('should have an element with the video-list class', () => {
     expect(videosListEl.findAll('.videos-list').length).toBe(1);
   });
+
+  it('should have property currentPageVideosList', () => {
+    videosListEl.vm.$store.commit('updateVideosList', longResult);
+    videosListEl.vm.$store.commit('setCurrentPage', 1);
+    expect(videosListEl.findAll('.videos-list__video').length).toBe(8);
+  });
 });
