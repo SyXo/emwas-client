@@ -43,13 +43,16 @@ describe('store/store.ts', () => {
     expect(store.state.currentPage).toBe(2);
     store.commit('setFlashMessage', 'Hello, I love Riley Reid');
     expect(store.state.flashMessage).toBe('Hello, I love Riley Reid');
+    store.commit('setVideoPerPage', 9);
+    expect(store.state.vidPerPage).toBe(9);
   });
 
   it('should filter correctly on a per page basis', () => {
     store.commit('updateVideosList', longResult);
     store.commit('setCurrentPage', 2);
+    store.commit('setVideoPerPage', 10);
     const { currentPageVideosList } = store.getters;
-    expect(currentPageVideosList.length).toBe(8);
+    expect(currentPageVideosList.length).toBe(6);
     expect(currentPageVideosList[currentPageVideosList.length - 1]).toEqual(lastElementOnPage);
   });
 });

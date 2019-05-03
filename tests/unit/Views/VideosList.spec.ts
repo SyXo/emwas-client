@@ -15,7 +15,8 @@ describe('VideosList.vue', () => {
 
   it('should have property currentPageVideosList', () => {
     videosListEl.vm.$store.commit('updateVideosList', longResult);
+    videosListEl.vm.$store.commit('setVideoPerPage', 8);
     videosListEl.vm.$store.commit('setCurrentPage', 1);
-    expect(videosListEl.findAll('.videos-list__video').length).toBe(8);
+    expect(videosListEl.findAll('.videos-list-wrapper__video').length).toBe(8);
   });
 });

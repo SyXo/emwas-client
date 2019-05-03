@@ -4,6 +4,7 @@ import flushPromises from 'flush-promises';
 import Home from '@/views/Home.vue';
 import * as httpSearch from '@/http/HttpSearch';
 import store from '@/store/store';
+import router from '@/router';
 
 // add fontawesome icon for test not to warn
 import Vue from 'vue';
@@ -18,7 +19,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 describe('Home.vue', () => {
   const localVue = createLocalVue();
   localVue.use(Vuex);
-  const homeElement = mount(Home, { localVue, store });
+  const homeElement = mount(Home, { localVue, store, router });
 
   it('should render one image with emwas-logo class', () => {
     expect(homeElement.findAll('img.emwas-logo').length).toBe(1);

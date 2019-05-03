@@ -22,6 +22,9 @@ const store: StoreOptions<RootState> = {
     setFlashMessage: (state, message: string) => {
       state.flashMessage = message;
     },
+    setVideoPerPage: (state, vidNumber: number) => {
+      state.vidPerPage = vidNumber;
+    },
   },
   getters: {
     currentPageVideosList: state => state.videosList.slice(

@@ -36,6 +36,7 @@ export default class Search extends Vue {
         this.$store.commit('setFlashMessage', '');
       }
       this.$store.commit('updateVideosList', response);
+      this.$emit('searchPerformed');
     }
   }
 }
