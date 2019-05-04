@@ -330,7 +330,7 @@ export default [
     ],
     description: 'Busty brunette Canela Skin gets pounded hard by Manuel Ferrara.  Canela is a thing of beauty, with her perfect perky tits and amazing ass this chick has got it all going on.  She’s already half naked in the hotel room as she teases Manuel with her voluptuous body and he can’t resist reaching in and playing with her pretty pussy and tight asshole as she lays in wait.  Manuel joins her on the bed and dives right between her legs to taste her sweet pussy before Canela pulls out his huge cock and starts blowing him.  She takes that big dick deep down her throats Manuel fucks her face hard and makes her gag.  They 69 for a bit then Canela gives Manuel a rim job before hopping on top and sliding that massive cock into her tight little pussy.  She rides Manuel’s cock hard and rubs her clit at the same time making her moan and scream for more as Manuel pounds her harder and harder.   Canela flips herself around to reverse cowgirl so we can watch that beautiful ass bounce as she takes that dick balls deep in her wet snatch.  She’s not finished with him yet, this horny whore wants that big cock in her backdoor and she’s not leaving until she gets it.  At first she tries to slide it in her ass without any lube, but Manuel grabs some and lubes himself up then easily bangs her beautiful booty.  Canela takes every inch of that massive cock in her perfect ass then swallows every last drop of Manuel’s load.',
     date: '2018-12-24T00:00:00.000Z',
-    length: 3360,
+    length: 3361,
     tags: [],
   },
   {

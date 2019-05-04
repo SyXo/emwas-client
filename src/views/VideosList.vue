@@ -52,7 +52,7 @@ import { State, Getter } from 'vuex-class';
     displayVidLength(initialLength: string): string {
       let res: string = '';
       const length = Number(initialLength);
-      const min = Math.ceil(length / 60);
+      const min = Math.floor(length / 60);
       const sec = length % 60;
       if (min > 0) {
         res += `${min} minutes`;

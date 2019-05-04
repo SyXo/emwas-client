@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: () => import('./views/About.vue'),
+      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
       path: '/search-result',
