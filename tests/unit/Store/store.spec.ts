@@ -55,4 +55,11 @@ describe('store/store.ts', () => {
     expect(currentPageVideosList.length).toBe(6);
     expect(currentPageVideosList[currentPageVideosList.length - 1]).toEqual(lastElementOnPage);
   });
+
+  it('should correctly get the last page', () => {
+    store.commit('updateVideosList', longResult);
+    store.commit('setCurrentPage', 2);
+    store.commit('setVideoPerPage', 3);
+    expect(store.getters.lastPage).toBe(6);
+  });
 });

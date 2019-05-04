@@ -21,34 +21,38 @@
         </div>
       </div>
       <div class="page-navigation" v-if="lastPage !== 1">
-        <button class="secondary-button" v-on:click="setPagination(-1)">First Page</button>
+        <button
+          id="pagination-go-to-start" class="secondary-button"
+          v-on:click="setPagination('start')"
+        >
+          First Page
+        </button>
         <form id="buttonWithText" v-on:submit.prevent="actOnButtonInput">
           <div id="slider">
             <span v-if="navIsButton">
               <input
-                class="third-button button-disabled collapsed"
-                type="button" id="toggle"
-                :value="this.currentPage"
-                v-on:click="actOnButtonInput()"
+                class="third-button button-disabled collapsed" type="button" id="toggle"
+                :value="this.currentPage" v-on:click="actOnButtonInput()"
               />
             </span>
             <span v-else>
               <input
-                class="third-button button-disabled"
-                type="number" id="input" tabindex="-1"
-                placeholder="#" size=10
-                v-model="inputedUserPage"
+                class="third-button button-disabled" type="number" id="input" tabindex="-1"
+                placeholder="#" size=10 v-model="inputedUserPage"
               />
               <input
-                class="third-button"
-                type="submit" id="submitSwitchButton"
-                tabindex="-1"
-                value="Go"
+                class="third-button" type="submit" id="submitSwitchButton"
+                tabindex="-1" value="Go"
               />
             </span>
           </div>
         </form>
-        <button class="secondary-button" v-on:click="setPagination(-2)">Last Page</button>
+        <button
+          id="pagination-go-to-end" class="secondary-button"
+          v-on:click="setPagination('end')"
+        >
+          Last Page
+        </button>
       </div>
     </div>
   </div>
@@ -109,13 +113,11 @@ export default class VideosList extends Vue {
     }
   }
 
-  setPagination(page: number): void {
-    if (page === -2) {
+  setPagination(page: string): void {
+    if (page === 'end') {
       this.$store.commit('setCurrentPage', this.lastPage);
-    } else if (page === -1) {
+    } else if (page === 'start') {
       this.$store.commit('setCurrentPage', 1);
-    } else if (page < this.lastPage && page > 0) {
-      this.$store.commit('setCurrentPage', page);
     }
   }
 
