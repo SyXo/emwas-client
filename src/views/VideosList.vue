@@ -20,6 +20,36 @@
           <VideoComponent :vid=currentVideo />
         </div>
       </div>
+      <div class="page-navigation" v-if="lastPage !== 1">
+        <button class="secondary-button" v-on:click="setPagination(-1)">First Page</button>
+        <form id="buttonWithText" v-on:submit.prevent="actOnButtonInput">
+          <div id="slider">
+            <span v-if="navIsButton">
+              <input
+                class="third-button button-disabled collapsed"
+                type="button" id="toggle"
+                :value="this.currentPage"
+                v-on:click="actOnButtonInput()"
+              />
+            </span>
+            <span v-else>
+              <input
+                class="third-button button-disabled"
+                type="number" id="input" tabindex="-1"
+                placeholder="#" size=10
+                v-model="inputedUserPage"
+              />
+              <input
+                class="third-button"
+                type="submit" id="submitSwitchButton"
+                tabindex="-1"
+                value="Go"
+              />
+            </span>
+          </div>
+        </form>
+        <button class="secondary-button" v-on:click="setPagination(-2)">Last Page</button>
+      </div>
     </div>
   </div>
 </template>
@@ -47,7 +77,19 @@ export default class VideosList extends Vue {
 
   @Getter('currentPageVideosList') currentPageVideosList!: [];
 
+  @Getter('lastPage') lastPage!: number;
+
+  navIsButton: boolean;
+
+  inputedUserPage: string;
+
   // https://github.com/ktsn/vuex-class/issues/19
+
+  constructor() {
+    super();
+    this.navIsButton = true;
+    this.inputedUserPage = '';
+  }
 
   mounted() {
     window.addEventListener('resize', debounce(this.configureImageNumberPerPage, 300));
@@ -65,6 +107,35 @@ export default class VideosList extends Vue {
     } else if (width < 1100 && this.$store.state.vidPerPage !== 8) {
       this.$store.commit('setVideoPerPage', 8);
     }
+  }
+
+  setPagination(page: number): void {
+    if (page === -2) {
+      this.$store.commit('setCurrentPage', this.lastPage);
+    } else if (page === -1) {
+      this.$store.commit('setCurrentPage', 1);
+    } else if (page < this.lastPage && page > 0) {
+      this.$store.commit('setCurrentPage', page);
+    }
+  }
+
+  actOnButtonInput(): void{
+    if (this.navIsButton) {
+      this.navIsButton = !this.navIsButton;
+    } else if (this.validateDataIsAnAppropriateNumber(this.inputedUserPage)) {
+      this.$store.commit('setCurrentPage', Number(this.inputedUserPage));
+      this.navIsButton = !this.navIsButton;
+    }
+  }
+
+  validateDataIsAnAppropriateNumber(userData: string): boolean {
+    const inputedUserDataAsNumber = Number(userData);
+    return (
+      Number.isInteger(inputedUserDataAsNumber)
+      && inputedUserDataAsNumber > 0
+      && inputedUserDataAsNumber <= this.lastPage
+      && this.currentPage !== inputedUserDataAsNumber
+    );
   }
 
   returnToLastPage() {
@@ -111,6 +182,42 @@ svg
   text-align: left
   margin-left: 3em
 
-.secondary-button
+%local-button
   padding: 10px 22px
+  margin-right: .4rem
+  margin-left: .4rem
+
+.secondary-button
+  @extend %local-button
+
+.third-button
+  @extend %local-button
+
+.page-navigation
+  margin-top: 1em
+  margin-bottom: 1em
+
+
+.button-disabled
+  cursor: text
+
+#buttonWithText
+  display: inline-block
+
+#slider
+  transition: 0.5s
+
+#slider.expanded
+  transform: translateX(-50%)
+
+
+#toggle
+  flex: 0 0 50%
+
+#input
+  flex: auto
+  max-width: 5em
+
+#ok
+  flex: none
 </style>

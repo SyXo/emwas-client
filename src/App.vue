@@ -63,6 +63,9 @@ nav
   display: inline-block
   font-size: 1.1em
   border-radius: 25px
+  &:hover
+    cursor: pointer
+    box-shadow: 2px 5px 4px $shadow-color
 
 .primary-button
   @extend %button
@@ -76,9 +79,18 @@ nav
   border: none
   color: $text-color
 
-  &:hover
-    cursor: pointer
-    box-shadow: 2px 5px 4px transparentize($text-color, 0.8)
+.third-button
+  @extend %button
+  background-color: $third-color
+  border: none
+  color: $text-color
+
+.button-disabled
+  background-color: $shadow-color
+.button-disabled:hover
+  box-shadow: none
+  cursor: unset
+
 
 .flash-info
   width: 80%

@@ -53,7 +53,7 @@ export default class VideoComponent extends Vue {
 .videos-list-wrapper__video
   margin-bottom: 1em
   &:hover
-    box-shadow: 2px 5px 4px 3px transparentize($text-color, 0.8)
+    box-shadow: 2px 5px 4px 3px $shadow-color
     border-top-color: transparentize($text-color, 0.5)
 
 .video-link

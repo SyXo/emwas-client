@@ -31,6 +31,7 @@ const store: StoreOptions<RootState> = {
       ((state.currentPage - 1) * state.vidPerPage),
       (state.currentPage * state.vidPerPage),
     ),
+    lastPage: state => Math.ceil(state.videosList.length / state.vidPerPage),
   },
 };
 
