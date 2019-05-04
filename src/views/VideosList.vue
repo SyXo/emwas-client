@@ -12,30 +12,10 @@
       </div>
       <div class="videos-list-wrapper">
         <div class="videos-list-wrapper__video"
-          v-for="(currentVideo, index) in currentPageVideosList"
-          :key="index"
+             v-for="(currentVideo, index) in currentPageVideosList"
+             :key="index"
         >
-          <a class="videos-list-wrapper__video__link" :href="currentVideo.url" target="_blank">
-            <img
-              class="videos-list-wrapper__video__img"
-              :src="currentVideo.thumbnailUrl[0]"
-              alt="video-img"
-            />
-            <div class="vid-title">{{ currentVideo.title }}</div>
-            <div class="vid-infos">
-              <div class="vid-performers">
-                <span
-                  v-for="(performer, index) in currentVideo.performers"
-                  :key="index"
-                  class="performer">
-                  {{ performer }}<span v-if="index !== currentVideo.performers.length -1">,</span>
-                </span>
-              </div>
-              <div class="vid-length">
-                {{ currentVideo.length | displayVidLength }}
-              </div>
-            </div>
-          </a>
+          <VideoComponent :vid=currentVideo />
         </div>
       </div>
     </div>
@@ -46,22 +26,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { State, Getter } from 'vuex-class';
+import VideoComponent from '../components/VideoComponent.vue';
 
 @Component({
-  filters: {
-    displayVidLength(initialLength: string): string {
-      let res: string = '';
-      const length = Number(initialLength);
-      const min = Math.floor(length / 60);
-      const sec = length % 60;
-      if (min > 0) {
-        res += `${min} minutes`;
-      }
-      if (sec > 0) {
-        res += ` and ${sec} seconds`;
-      }
-      return res;
-    },
+  components: {
+    VideoComponent,
   },
 })
 export default class VideosList extends Vue {
@@ -129,37 +98,5 @@ export default class VideosList extends Vue {
 
   @media screen and (max-width: $medium-screen)
     grid-row-gap: 2em
-
-.videos-list-wrapper__video
-  margin-bottom: 1em
-  &:hover
-    box-shadow: 2px 5px 4px 3px transparentize($text-color, 0.8)
-    border-top-color: transparentize($text-color, 0.5)
-
-.videos-list-wrapper__video__link
-  color: $text-color
-  text-decoration: none
-  font-weight: normal
-  width: 100%
-  height: 100%
-  display: flex
-  flex-direction: column
-  justify-content: start
-  align-items: center
-
-  .videos-list-wrapper__video__img
-    width: 90%
-    margin-top: 1rem
-
-.vid-title
-  max-width: 90%
-  margin-top: 1em
-  display: block
-  font-weight: bold
-  color: $accent-color
-
-.vid-infos
-  color: $text-color
-  text-decoration: none
 
 </style>
