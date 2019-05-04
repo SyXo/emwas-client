@@ -1,13 +1,13 @@
 <template>
-    <a class="videos-list-wrapper__video__link" :href="vid.url" target="_blank">
+    <a class="video-link" :href="vid.url" target="_blank">
       <img
-        class="videos-list-wrapper__video__img"
+        class="video-image"
         :src="vid.thumbnailUrl[0]"
         alt="video-img"
       />
-      <div class="vid-title">{{ vid.title }}</div>
-      <div class="vid-infos">
-        <div class="vid-performers">
+      <div class="video-title">{{ vid.title }}</div>
+      <div class="video-infos">
+        <div class="video-performers">
           <span
             v-for="(performer, index) in vid.performers"
             :key="index"
@@ -15,7 +15,7 @@
             {{ performer }}<span v-if="index !== vid.performers.length -1">,</span>
           </span>
         </div>
-        <div class="vid-length">
+        <div class="video-length">
           {{ vid.length | displayVidLength }}
         </div>
       </div>
@@ -56,7 +56,7 @@ export default class VideoComponent extends Vue {
     box-shadow: 2px 5px 4px 3px transparentize($text-color, 0.8)
     border-top-color: transparentize($text-color, 0.5)
 
-.videos-list-wrapper__video__link
+.video-link
   color: $text-color
   text-decoration: none
   font-weight: normal
@@ -67,18 +67,18 @@ export default class VideoComponent extends Vue {
   justify-content: flex-start
   align-items: center
 
-  .videos-list-wrapper__video__img
+  .video-image
     width: 90%
     margin-top: 1rem
 
-.vid-title
+.video-title
   max-width: 90%
   margin-top: 1em
   display: block
   font-weight: bold
   color: $accent-color
 
-.vid-infos
+.video-infos
   color: $text-color
   text-decoration: none
 

@@ -41,28 +41,6 @@ describe('VideosList.vue', () => {
     expect(videosListEl.findAll('.videos-list-wrapper__video').length).toBe(6);
   });
 
-  it('should link to the original video', () => {
-    videosListEl.vm.$store.commit('updateVideosList', longResult);
-    videosListEl.vm.$store.commit('setVideoPerPage', 10);
-    videosListEl.vm.$store.commit('setCurrentPage', 2);
-    expect(
-      videosListEl.findAll('.videos-list-wrapper__video__link').at(5).attributes('href'),
-    ).toBe('https://www.julesjordan.com/trial/scenes/Jane-Wilde-Teen-Anal-Facial-Old-Man-Christmas-Porn-4k_vids.html');
-  });
-
-  it('should display the length of the video as x minutes and x seconds', () => {
-    videosListEl.vm.$store.commit('updateVideosList', longResult);
-    videosListEl.vm.$store.commit('setVideoPerPage', 10);
-    videosListEl.vm.$store.commit('setCurrentPage', 2);
-    const links = videosListEl.findAll('.videos-list-wrapper__video__link');
-    expect(
-      links.at(5).find('.vid-length').text(),
-    ).toBe('30 minutes');
-    expect(
-      links.at(4).find('.vid-length').text(),
-    ).toBe('56 minutes and 1 seconds');
-  });
-
   it('should provide a "back to last page" option', () => {
     const goBack = videosListEl.findAll('.return');
     expect(goBack.length).toBe(1);
