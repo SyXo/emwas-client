@@ -7,9 +7,11 @@
       </p>
     </div>
     <div v-else>
-      <div class="return" v-on:click="returnToLastPage">
-        &lt;=
-      </div>
+      <header class="top-bar">
+        <button class="secondary-button return" v-on:click="returnToLastPage">
+          <font-awesome-icon icon="chevron-left" /> Go back
+        </button>
+      </header>
       <div class="videos-list-wrapper">
         <div class="videos-list-wrapper__video"
              v-for="(currentVideo, index) in currentPageVideosList"
@@ -24,6 +26,7 @@
 
 
 <script lang="ts">
+import { debounce } from 'debounce';
 import { Component, Vue } from 'vue-property-decorator';
 import { State, Getter } from 'vuex-class';
 import VideoComponent from '../components/VideoComponent.vue';
@@ -47,8 +50,8 @@ export default class VideosList extends Vue {
   // https://github.com/ktsn/vuex-class/issues/19
 
   mounted() {
+    window.addEventListener('resize', debounce(this.configureImageNumberPerPage, 300));
     this.configureImageNumberPerPage();
-    window.addEventListener('resize', this.configureImageNumberPerPage);
   }
 
   beforeDestroy() {
@@ -59,7 +62,7 @@ export default class VideosList extends Vue {
     const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (width >= 1100 && this.$store.state.vidPerPage !== 9) {
       this.$store.commit('setVideoPerPage', 9);
-    } else if (this.$store.state.vidPerPage !== 8) {
+    } else if (width < 1100 && this.$store.state.vidPerPage !== 8) {
       this.$store.commit('setVideoPerPage', 8);
     }
   }
@@ -99,4 +102,15 @@ export default class VideosList extends Vue {
   @media screen and (max-width: $medium-screen)
     grid-row-gap: 2em
 
+// font awesome icons are translated into svg
+svg
+  margin-right: 5px
+
+.top-bar
+  margin-bottom: 2em
+  text-align: left
+  margin-left: 3em
+
+.secondary-button
+  padding: 10px 22px
 </style>

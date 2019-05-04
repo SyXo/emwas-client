@@ -56,16 +56,25 @@ a
 nav
   margin-bottom: 2em
 
-.primary-button
-  background-color: $accent-color
-  border: none
-  color: white
+%button
   padding: 15px 32px
   text-align: center
   text-decoration: none
   display: inline-block
   font-size: 1.1em
   border-radius: 25px
+
+.primary-button
+  @extend %button
+  background-color: $accent-color
+  border: none
+  color: white
+
+.secondary-button
+  @extend %button
+  background-color: $secondary-color
+  border: none
+  color: $text-color
 
   &:hover
     cursor: pointer
