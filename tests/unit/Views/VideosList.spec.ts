@@ -16,7 +16,7 @@ library.add(faChevronLeft);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 // \fontawesome
 
-
+/* Usefull when testing resizing but we need to mock debounce (see test below)
 function resizeWindow(width: number, height: number = 450) {
   // @ts-ignore
   window.innerWidth = width;
@@ -24,6 +24,7 @@ function resizeWindow(width: number, height: number = 450) {
   window.innerHeight = height;
   window.dispatchEvent(new Event('resize'));
 }
+*/
 
 let mixinTriggered = false;
 const mixin = {
@@ -60,15 +61,20 @@ describe('VideosList.vue', () => {
     expect(videosListEl.vm.$router.currentRoute).not.toBe('/search-result');
   });
 
-  /**
-   * Need to mock debounce to make this test work and can't find a way to achieve it easily
-  it('should adapt the number of video per page to the browser width', async () => {
+
+  // Need to mock debounce to make this test work and can't find a way to achieve it easily
+  // Seems pretty much impossible with the lib we are using
+  // https://github.com/component/debounce/issues/22
+  /*
+  it('should adapt the number of video per page to the browser width', () => {
+    debounce.mockImplementation('debounce', () => fn => fn);
     resizeWindow(400);
     expect(videosListEl.vm.$store.state.vidPerPage).toBe(8);
     resizeWindow(1300);
     expect(videosListEl.vm.$store.state.vidPerPage).toBe(9);
   });
   */
+
 
   it('should not include pagination on low number of results', () => {
     videosListEl.vm.$store.commit('updateVideosList', shortResult);
