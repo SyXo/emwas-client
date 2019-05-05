@@ -1,6 +1,8 @@
 import store from '@/store/store';
 import classicalSearchResults from '../../mocks/http/SearchNatalia';
 import longResult from '../../mocks/http/longResult';
+import localForage from 'localforage';
+import flushPromises from 'flush-promises';
 
 const lastElementOnPage = {
   service: 1,
@@ -34,6 +36,22 @@ describe('store/store.ts', () => {
       vidPerPage: 8,
     };
     expect(store.state).toEqual(expectedInitalState);
+  });
+
+  it('should have a function to set videos list to what\'s inside local storage', async () => {
+    localForage.getItem = jest.fn().mockResolvedValue(longResult);
+    store.dispatch('videosListFromStorage');
+    await flushPromises();
+    expect(store.state.videosList).toEqual(longResult);
+  });
+
+  it('should have a function to set videos local storage while changing videos list', async () => {
+    localForage.setItem = jest.fn();
+    store.dispatch('updateVideosListStoreResults', longResult);
+    await flushPromises();
+    expect(store.state.videosList).toEqual(longResult);
+    // @ts-ignore
+    expect(localForage.setItem.mock.calls.length).toBe(1);
   });
 
   it('should update values on using setters', () => {

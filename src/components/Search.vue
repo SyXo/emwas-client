@@ -34,7 +34,8 @@ export default class Search extends Vue {
       if (this.$store.state.flashMessage !== '') {
         this.$store.commit('setFlashMessage', '');
       }
-      this.$store.commit('updateVideosList', response);
+      await this.$store.dispatch('updateVideosListStoreResults', response);
+      // this.$store.commit('updateVideosList', response);
       this.$emit('searchPerformed');
     }
     this.$emit('inverseLoading');

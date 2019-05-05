@@ -81,7 +81,7 @@ describe('VideosList.vue', () => {
     expect(videosListEl.findAll('page-navigation').length).toBe(0);
   });
 
-  it('should unlink videoPerPage event watcher on element destruction', () => {
+  it('should unlink videoPerPage event watcher on element destruction', async () => {
     videosListEl.destroy();
     expect(mixinTriggered).toBe(true);
   });

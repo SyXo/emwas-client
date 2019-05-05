@@ -48,9 +48,20 @@ export default class VideosList extends Vue {
 
   @State('vidPerPage') vidPerPage!: number;
 
+  // not used on component but needed to have a reactive component
+  @State('lastPage') lastPage!: number;
+
   @Getter('currentPageVideosList') currentPageVideosList!: [];
 
   // https://github.com/ktsn/vuex-class/issues/19
+
+  beforeMount() {
+    if (this.videosList && Array.isArray(this.videosList)) {
+      if (this.videosList.length === 0) {
+        this.$store.dispatch('videosListFromStorage');
+      }
+    }
+  }
 
   mounted() {
     window.addEventListener('resize', debounce(this.configureImageNumberPerPage, 300));

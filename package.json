@@ -17,6 +17,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "axios": "^0.18.0",
     "debounce": "^1.2.0",
+    "localforage": "^1.7.3",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.6",
     "vue-class-component": "^7.0.0",

@@ -1,6 +1,7 @@
 /* eslint no-param-reassign: 0 */
 import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
+import localForage from 'localforage';
 import RootState from './types';
 
 Vue.use(Vuex);
@@ -12,6 +13,20 @@ const store: StoreOptions<RootState> = {
     currentPage: 1,
     vidPerPage: 8,
   },
+
+  actions: {
+    videosListFromStorage: async (context) => {
+      const inStorage = await localForage.getItem('lastSearchResult');
+      if (Array.isArray(inStorage)) {
+        context.commit('updateVideosList', inStorage);
+      }
+    },
+    updateVideosListStoreResults: async (context, payload) => {
+      context.commit('updateVideosList', payload);
+      await localForage.setItem('lastSearchResult', payload);
+    },
+  },
+
   mutations: {
     updateVideosList: (state, newVideosList) => {
       state.videosList = newVideosList;

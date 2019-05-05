@@ -1,5 +1,5 @@
 interface RootState {
-  videosList: [],
+  videosList: (any)[],
   flashMessage: string,
   currentPage: number,
   vidPerPage: number,
