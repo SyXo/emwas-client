@@ -75,53 +75,11 @@ describe('VideosList.vue', () => {
   });
   */
 
-
   it('should not include pagination on low number of results', () => {
     videosListEl.vm.$store.commit('updateVideosList', shortResult);
     videosListEl.vm.$store.commit('setVideoPerPage', 10);
     expect(videosListEl.findAll('page-navigation').length).toBe(0);
   });
-
-  it('should send to first and last page with pagination buttons', () => {
-    videosListEl.vm.$store.commit('updateVideosList', longResult);
-    videosListEl.vm.$store.commit('setVideoPerPage', 3);
-    videosListEl.find('#pagination-go-to-start').trigger('click');
-    expect(videosListEl.vm.$store.state.currentPage).toBe(1);
-    videosListEl.find('#pagination-go-to-end').trigger('click');
-    expect(videosListEl.vm.$store.state.currentPage).toBe(6);
-  });
-
-  it('should have a switchable button/input element', () => {
-    videosListEl.vm.$store.commit('setCurrentPage', 1);
-    const form = videosListEl.find('#buttonWithText');
-    form.find('#toggle').trigger('click');
-    expect(form.findAll('#input').length).toBe(1);
-  });
-
-  it('should have a switchable button/input that does not allow negative or 0 page number', () => {
-    const form = videosListEl.find('#buttonWithText');
-    form.find('#input').setValue('-4');
-    form.trigger('submit');
-    expect(videosListEl.vm.$store.state.currentPage).toBe(1);
-    form.find('#input').setValue('0');
-    form.trigger('submit');
-    expect(videosListEl.vm.$store.state.currentPage).toBe(1);
-  });
-
-  it('should have a switchable button/input that does not allow extreme high page number', () => {
-    const form = videosListEl.find('#buttonWithText');
-    form.find('#input').setValue('160');
-    form.trigger('submit');
-    expect(videosListEl.vm.$store.state.currentPage).toBe(1);
-  });
-
-  it('should have a switchable button/input that sends you to a page if your page number is valid', () => {
-    const form = videosListEl.find('#buttonWithText');
-    form.find('#input').setValue('3');
-    form.trigger('submit');
-    expect(videosListEl.vm.$store.state.currentPage).toBe(3);
-  });
-
 
   it('should unlink videoPerPage event watcher on element destruction', () => {
     videosListEl.destroy();

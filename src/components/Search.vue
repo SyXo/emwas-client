@@ -3,15 +3,13 @@
 
     <div class="search__container">
       <form action="#" v-on:submit.prevent="launchSearch()">
-        <label class="search__label">
-          <input
-            class="search__input"
-            type="text"
-            placeholder="Search"
-            v-model="searchText"
-          >
-          Search
-        </label>
+        <input
+          aria-label="Search"
+          class="search__input"
+          type="text"
+          placeholder="Search"
+          v-model="searchText"
+        >
         <input class="search__submit primary-button" type="submit" value="Go">
       </form>
     </div>
@@ -58,9 +56,6 @@ export default class Search extends Vue {
   &__container
     padding-top: 64px
     width: 60%
-
-  &__label
-    color: transparent
 
   &__input
     @media screen and (max-width: $medium-screen)
