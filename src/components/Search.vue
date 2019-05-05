@@ -3,15 +3,13 @@
 
     <div class="search__container">
       <form action="#" v-on:submit.prevent="launchSearch()">
-        <label class="search__label">
-          <input
-            class="search__input"
-            type="text"
-            placeholder="Search"
-            v-model="searchText"
-          >
-          Search
-        </label>
+        <input
+          aria-label="Search"
+          class="search__input"
+          type="text"
+          placeholder="Search"
+          v-model="searchText"
+        >
         <input class="search__submit primary-button" type="submit" value="Go">
       </form>
     </div>
@@ -21,29 +19,30 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import * as search from '../http/search';
+import * as search from '../http/HttpSearch';
 
 @Component
 export default class Search extends Vue {
   searchText: string = '';
 
-  searchResult = {};
-
-  getSearchResult() { return this.searchResult; }
-
   async launchSearch() {
-    this.$emit('setFlashMessage', '');
+    this.$emit('inverseLoading');
     const response = await search.default.findVideosWithText(this.searchText);
     if (response === null) {
-      this.$emit('setFlashMessage', 'You need to search on at least 3 characters');
+      this.$store.commit('setFlashMessage', 'You need to search on at least 3 characters');
     } else {
-      this.searchResult = response;
+      if (this.$store.state.flashMessage !== '') {
+        this.$store.commit('setFlashMessage', '');
+      }
+      await this.$store.dispatch('updateVideosListStoreResults', response);
+      // this.$store.commit('updateVideosList', response);
+      this.$emit('searchPerformed');
     }
+    this.$emit('inverseLoading');
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 @import ../assets/sass/variables
 
@@ -61,16 +60,20 @@ export default class Search extends Vue {
     padding-top: 64px
     width: 60%
 
-  &__label
-    color: transparent
-
   &__input
-    width: 100%
-    padding: 12px 24px
+    @media screen and (max-width: $medium-screen)
+      width: 90%
+      padding: 12px 0 12px 5%
+    @media screen and (min-width: $medium-screen)
+      width: 0.7 * $medium-screen
+      padding: 12px 0 12px 32px
     margin-bottom: 1em
     background-color: transparent
     font-family: 'Alegreya Sans', 'Open Sans', Helvetica, sans-serif
-    font-size: 22px
+    @media screen and (max-width: $small-screen)
+      font-size: 18px
+    @media screen and (min-width: $small-screen)
+      font-size: 22px
     font-weight: bold
     line-height: 24px
     color: $text-color
@@ -79,7 +82,7 @@ export default class Search extends Vue {
 
     background-repeat: no-repeat
     background-size: 22px 22px
-    background-position: 97% center
+    background-position: 95% center
     border-radius: 50px
     border: 1px solid $text-color-lower-alpha
     transition: all 250ms ease-in-out
@@ -98,5 +101,11 @@ export default class Search extends Vue {
       border-bottom: 1px solid $text-color-lower-alpha
       border-radius: 0
       background-position: 100% center
+
+.search__submit
+  display: block
+  margin-right: auto
+  margin-left: auto
+  text-align: center
 
 </style>

@@ -46,9 +46,6 @@ a
     .router-link-exact-active
       color: $text-color
 
-.emwas-logo
-  max-width: 640px
-
 .page-appear-enter-active, .page-appear-leave-active
   opacity: 0
   transition: all 150ms ease-in-out 0s
@@ -59,20 +56,41 @@ a
 nav
   margin-bottom: 2em
 
-.primary-button
-  background-color: $accent-color
-  border: none
-  color: white
+%button
   padding: 15px 32px
   text-align: center
   text-decoration: none
   display: inline-block
   font-size: 1.1em
   border-radius: 25px
-
   &:hover
     cursor: pointer
-    box-shadow: 2px 5px 4px transparentize($text-color, 0.8)
+    box-shadow: 2px 5px 4px $shadow-color
+
+.primary-button
+  @extend %button
+  background-color: $accent-color
+  border: none
+  color: white
+
+.secondary-button
+  @extend %button
+  background-color: $secondary-color
+  border: none
+  color: $text-color
+
+.third-button
+  @extend %button
+  background-color: $third-color
+  border: none
+  color: $text-color
+
+.button-disabled
+  background-color: $shadow-color
+.button-disabled:hover
+  box-shadow: none
+  cursor: unset
+
 
 .flash-info
   width: 80%

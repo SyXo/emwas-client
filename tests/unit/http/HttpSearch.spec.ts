@@ -1,8 +1,8 @@
-import * as httpSearch from '@/http/search';
+import * as httpSearch from '@/http/HttpSearch';
 import nataliaSearchResult from '../../mocks/http/SearchNatalia';
 import MockAdapter from 'axios-mock-adapter';
 
-describe('http/search.ts', () => {
+describe('http/HttpSearch.ts', () => {
   describe('findVideosWithText', () => {
     it('should return what the API returned if it happened well', async () => {
       const mock = new MockAdapter(httpSearch.default.httpClient);
@@ -33,9 +33,6 @@ describe('http/search.ts', () => {
     it('throws an error if API HTTP call failed', async () => {
       const mock = new MockAdapter(httpSearch.default.httpClient);
       mock.onGet(/.*\/api.*/).reply(500, 'Server error');
-      httpSearch.default.httpClient.get('https://api.emwas.co/api/search?q=Nikita').then((ret) => {
-        console.log(ret.data);
-      });
       let errorString = '';
       try {
         await httpSearch.default.findVideosWithText('Nikita');
