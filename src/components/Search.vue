@@ -26,6 +26,7 @@ export default class Search extends Vue {
   searchText: string = '';
 
   async launchSearch() {
+    this.$emit('inverseLoading');
     const response = await search.default.findVideosWithText(this.searchText);
     if (response === null) {
       this.$store.commit('setFlashMessage', 'You need to search on at least 3 characters');
@@ -36,6 +37,7 @@ export default class Search extends Vue {
       this.$store.commit('updateVideosList', response);
       this.$emit('searchPerformed');
     }
+    this.$emit('inverseLoading');
   }
 }
 </script>
